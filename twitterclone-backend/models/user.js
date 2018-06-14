@@ -21,7 +21,11 @@ const userSchema = new mongoose.Schema({
   },
   profileImageUrl: {
     type: String
-  }
+  },
+  messages: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Message"
+  }]
 });
 
 // SAVING DOCUMENTS IN DB WITH A HASHED PASSWORD
@@ -43,7 +47,7 @@ userSchema.pre("save", async function(next) {
 
 // PASSWORD COMPARISON
 // Compares a hashed password with the user's hased password saved in db.
-userSchema.method.comparePassword = async function(candidatePassword, next) {
+userSchema.methods.comparePassword = async function(candidatePassword, next) {
   try {
     let isMatch = await bcrypt.compare(candidatePassword, this.password);
     return isMatch;
