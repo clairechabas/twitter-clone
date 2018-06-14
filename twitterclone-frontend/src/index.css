@@ -29,3 +29,24 @@ ul.nav.navbar-nav li {
   background-image: url("./images/nav-bg.png");
   background-size: 100% 100%;
 }
+
+/* Homepage */
+.home-hero {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+  background-image: url("./images/signed-out-home.jpg");
+  text-align: center;
+  padding: 1rem;
+  background-position: center center;
+  background-size: cover;
+  flex-direction: column;
+  color: white;
+  text-shadow: 0 0 8px #66757f;
+}
