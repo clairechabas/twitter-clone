@@ -8,3 +8,5 @@ const message = (state=[], action) => {
       return state;
   }
 };
+
+export default message;
