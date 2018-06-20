@@ -13,7 +13,7 @@ const Homepage = ({currentUser}) => {
     );
   } else {
     return(
-      <div><MessageTimeline /></div>
+      <div><MessageTimeline profileImageUrl={currentUser.user.profileImageUrl} username={currentUser.user.username} /></div>
     );
   }
 
