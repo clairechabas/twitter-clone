@@ -18,7 +18,7 @@ class NavBar extends Component {
           <Link to="/" className="navbar-brand"><img src={Logo} alt="TwitterClone Home" /></Link>
           </div>
           {this.props.currentUser.isAuthenticated ? (
-            <ul>
+            <ul className="nav navbar-nav navbar-right">
               <li><Link to={`/users/${this.props.currentUser.user.id}/messages/new`}>New Message</Link></li>
               <li><a onClick={this.logout}>Log out</a></li>
             </ul>
